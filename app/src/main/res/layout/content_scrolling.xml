@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.scratch.ashish.fileserverapp.ScrollingActivity"
+    tools:showIn="@layout/activity_scrolling"
+    android:padding="7dp"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id = "@+id/Card_View2"
+            android:layout_gravity = "center"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            card_view:cardCornerRadius="1dp"
+            android:padding="7dp"
+            android:clickable="true"
+            android:contextClickable="false"
+            android:layout_marginTop="75dp"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackground"  >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:src = "@drawable/ic_memory_black_24dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Electronics"
+                        android:id="@+id/textView2"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="15dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Branch Code: EC"
+                        android:id="@+id/textView3"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="15dp" />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id = "@+id/Card_View3"
+            android:layout_gravity = "center"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            card_view:cardCornerRadius="1dp"
+            android:padding="7dp"
+            android:clickable="true"
+            android:contextClickable="false"
+            android:layout_marginTop="150dp"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackground">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:src = "@drawable/ic_fingerprint_black_24dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Biotechnology"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="15dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Branch Code: BT"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="15dp" />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id = "@+id/Card_View4"
+            android:layout_gravity = "center"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            card_view:cardCornerRadius="1dp"
+            android:padding="7dp"
+            android:clickable="true"
+            android:contextClickable="false"
+            android:layout_marginTop="225dp"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackground" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:src = "@drawable/ic_school_black_24dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="HSS"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="15dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Subject Code: HSS"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="15dp" />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id = "@+id/Card_View1"
+            android:layout_gravity = "center"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            card_view:cardCornerRadius="1dp"
+            android:padding="7dp"
+            android:clickable="true"
+            android:contextClickable="false"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackground" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:src = "@drawable/ic_computer_black_24dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="CS/IT"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="15dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Branch Code: CS"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="15dp" />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id = "@+id/Card_View5"
+            android:layout_gravity = "center"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            card_view:cardCornerRadius="1dp"
+            android:padding="7dp"
+            android:clickable="true"
+            android:layout_marginTop="300dp"
+            android:contextClickable="false"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackground" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:src = "@drawable/ic_graphic_eq_black_24dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Physics"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="15dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Subject Code: PH"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="15dp" />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id = "@+id/Card_View6"
+            android:layout_gravity = "center"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            card_view:cardCornerRadius="1dp"
+            android:layout_marginTop="375dp"
+            android:padding="7dp"
+            android:clickable="true"
+            android:contextClickable="false"
+            android:focusable="true"
+            android:foreground="?android:selectableItemBackground" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:src = "@drawable/ic_timeline_black_24dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Maths"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="15dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Subject Code: MA"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="15dp" />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>

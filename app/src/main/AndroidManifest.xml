@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.scratch.ashish.fileserverapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/new_scratch"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity"
+            android:label="@string/name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity2"
+            android:label="@string/title_activity_scrolling2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity1_1"
+            android:label="@string/title_activity_scrolling_activity1_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity2_0"
+            android:label="@string/title_activity_scrolling_activity2_0"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity2_1"
+            android:label="@string/title_activity_scrolling_activity2_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity3_0"
+            android:label="@string/title_activity_scrolling_activity3_0"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity3_1"
+            android:label="@string/title_activity_scrolling_activity3_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity4_0"
+            android:label="@string/title_activity_scrolling_activity4_0"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity1_1_1"
+            android:label="@string/title_activity_scrolling_activity1_1_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity1_1_2"
+            android:label="@string/title_activity_scrolling_activity1_1_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity1_1_3"
+            android:label="@string/title_activity_scrolling_activity1_1_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity1_1_4"
+            android:label="@string/title_activity_scrolling_activity1_1_4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity_Test"
+            android:label="@string/title_activity_scrolling_activity__test"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity7_0"
+            android:label="@string/title_activity_scrolling_activity7_0"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity7_1"
+            android:label="@string/title_activity_scrolling_activity7_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity7_2"
+            android:label="@string/title_activity_scrolling_activity7_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity5_1"
+            android:label="@string/title_activity_scrolling_activity5_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivity6_1"
+            android:label="@string/title_activity_scrolling_activity6_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.About"
+            android:label="About" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Settings"
+            android:label="Settings" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.ScrollingActivityMAIN"
+            android:label="@string/title_activity_scrolling_activity_main"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.SystemNetworks"
+            android:label="@string/title_activity_system_networks"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MtechCs"
+            android:label="@string/title_activity_mtech_cs"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MtechCs1"
+            android:label="@string/title_activity_mtech_cs1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MtechCs2"
+            android:label="@string/title_activity_mtech_cs2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss1"
+            android:label="@string/title_activity_hss1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss2"
+            android:label="@string/title_activity_hss2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss3"
+            android:label="@string/title_activity_hss3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss4"
+            android:label="@string/title_activity_hss4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Biotech1"
+            android:label="@string/title_activity_biotech1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Biotech2"
+            android:label="@string/title_activity_biotech2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Biotech3"
+            android:label="@string/title_activity_biotech3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Biotech4"
+            android:label="@string/title_activity_biotech4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs2_B_Sub1"
+            android:label="@string/title_activity_cs2__b__sub1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs2_B_Sub2"
+            android:label="@string/title_activity_cs2__b__sub2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs2_B_Sub3"
+            android:label="@string/title_activity_cs2__b__sub3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs2_B_Sub4"
+            android:label="@string/title_activity_cs2__b__sub4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs1_B_Sub1"
+            android:label="@string/title_activity_cs1__b__sub1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs3_B_Sub1"
+            android:label="@string/title_activity_cs3__b__sub1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs3_B_Sub2"
+            android:label="@string/title_activity_cs3__b__sub2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs3_B_Sub3"
+            android:label="@string/title_activity_cs3__b__sub3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs3_B_Sub4"
+            android:label="@string/title_activity_cs3__b__sub4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs3_B_Sub5"
+            android:label="@string/title_activity_cs3__b__sub5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs3_B_Sub6"
+            android:label="@string/title_activity_cs3__b__sub6"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs3_B_Sub7"
+            android:label="@string/title_activity_cs3__b__sub7"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs3_B_Sub8"
+            android:label="@string/title_activity_cs3__b__sub8"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs3_B_Sub9"
+            android:label="@string/title_activity_cs3__b__sub9"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs3_B_Sub10"
+            android:label="@string/title_activity_cs3__b__sub10"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs3_B_Sub11"
+            android:label="@string/title_activity_cs3__b__sub11"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs4_B_Sub1"
+            android:label="@string/title_activity_cs4__b__sub1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs4_B_Sub2"
+            android:label="@string/title_activity_cs4__b__sub2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs4_B_Sub3"
+            android:label="@string/title_activity_cs4__b__sub3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs4_B_Sub4"
+            android:label="@string/title_activity_cs4__b__sub4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs4_B_Sub5"
+            android:label="@string/title_activity_cs4__b__sub5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs4_B_Sub6"
+            android:label="@string/title_activity_cs4__b__sub6"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs4_B_Sub7"
+            android:label="@string/title_activity_cs4__b__sub7"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs4_B_Sub8"
+            android:label="@string/title_activity_cs4__b__sub8"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs4_B_Sub9"
+            android:label="@string/title_activity_cs4__b__sub9"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs4_B_Sub10"
+            android:label="@string/title_activity_cs4__b__sub10"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs4_B_Sub11"
+            android:label="@string/title_activity_cs4__b__sub11"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba1_Sub1"
+            android:label="@string/title_activity_mba1__sub1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba1_Sub2"
+            android:label="@string/title_activity_mba1__sub2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba1_Sub3"
+            android:label="@string/title_activity_mba1__sub3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba1_Sub4"
+            android:label="@string/title_activity_mba1__sub4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba1_Sub5"
+            android:label="@string/title_activity_mba1__sub5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba1_Sub6"
+            android:label="@string/title_activity_mba1__sub6"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba1_Sub7"
+            android:label="@string/title_activity_mba1__sub7"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub1"
+            android:label="@string/title_activity_mba2__sub1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub2"
+            android:label="@string/title_activity_mba2__sub2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub3"
+            android:label="@string/title_activity_mba2__sub3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub4"
+            android:label="@string/title_activity_mba2__sub4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub5"
+            android:label="@string/title_activity_mba2__sub5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub6"
+            android:label="@string/title_activity_mba2__sub6"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub7"
+            android:label="@string/title_activity_mba2__sub7"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub8"
+            android:label="@string/title_activity_mba2__sub8"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub9"
+            android:label="@string/title_activity_mba2__sub9"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub10"
+            android:label="@string/title_activity_mba2__sub10"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub11"
+            android:label="@string/title_activity_mba2__sub11"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub12"
+            android:label="@string/title_activity_mba2__sub12"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub13"
+            android:label="@string/title_activity_mba2__sub13"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub14"
+            android:label="@string/title_activity_mba2__sub14"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub15"
+            android:label="@string/title_activity_mba2__sub15"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub16"
+            android:label="@string/title_activity_mba2__sub16"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub17"
+            android:label="@string/title_activity_mba2__sub17"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub18"
+            android:label="@string/title_activity_mba2__sub18"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub19"
+            android:label="@string/title_activity_mba2__sub19"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub20"
+            android:label="@string/title_activity_mba2__sub20"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub21"
+            android:label="@string/title_activity_mba2__sub21"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub22"
+            android:label="@string/title_activity_mba2__sub22"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub23"
+            android:label="@string/title_activity_mba2__sub23"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Mba2_Sub24"
+            android:label="@string/title_activity_mba2__sub24"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss1_Sub2"
+            android:label="@string/title_activity_hss1__sub2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss1_Sub3"
+            android:label="@string/title_activity_hss1__sub3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss2_Sub2"
+            android:label="@string/title_activity_hss2__sub2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss2_Sub1"
+            android:label="@string/title_activity_hss2__sub1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss2_Sub3"
+            android:label="@string/title_activity_hss2__sub3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss2_Sub4"
+            android:label="@string/title_activity_hss2__sub4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss3_Sub1"
+            android:label="@string/title_activity_hss3__sub1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss3_Sub2"
+            android:label="@string/title_activity_hss3__sub2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss3_Sub3"
+            android:label="@string/title_activity_hss3__sub3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss3_Sub4"
+            android:label="@string/title_activity_hss3__sub4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss3_Sub5"
+            android:label="@string/title_activity_hss3__sub5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss4_Sub1"
+            android:label="@string/title_activity_hss4__sub1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss4_Sub2"
+            android:label="@string/title_activity_hss4__sub2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss4_Sub3"
+            android:label="@string/title_activity_hss4__sub3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss4_Sub4"
+            android:label="@string/title_activity_hss4__sub4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss4_Sub5"
+            android:label="@string/title_activity_hss4__sub5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Hss4_Sub6"
+            android:label="@string/title_activity_hss4__sub6"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Math1"
+            android:label="@string/title_activity_math1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Math2"
+            android:label="@string/title_activity_math2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Math3"
+            android:label="@string/title_activity_math3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Math4"
+            android:label="@string/title_activity_math4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Math5"
+            android:label="@string/title_activity_math5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Math6"
+            android:label="@string/title_activity_math6"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Math7"
+            android:label="@string/title_activity_math7"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Math8"
+            android:label="@string/title_activity_math8"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Math9"
+            android:label="@string/title_activity_math9"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Math10"
+            android:label="@string/title_activity_math10"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Math11"
+            android:label="@string/title_activity_math11"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug1"
+            android:label="@string/title_activity_ecug1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug2"
+            android:label="@string/title_activity_ecug2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug3"
+            android:label="@string/title_activity_ecug3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug4"
+            android:label="@string/title_activity_ecug4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug1_1"
+            android:label="@string/title_activity_ecug1_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug1_2"
+            android:label="@string/title_activity_ecug1_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug2_1"
+            android:label="@string/title_activity_ecug2_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug2_2"
+            android:label="@string/title_activity_ecug2_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug2_3"
+            android:label="@string/title_activity_ecug2_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug2_4"
+            android:label="@string/title_activity_ecug2_4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug2_5"
+            android:label="@string/title_activity_ecug2_5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug2_6"
+            android:label="@string/title_activity_ecug2_6"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug2_7"
+            android:label="@string/title_activity_ecug2_7"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug2_8"
+            android:label="@string/title_activity_ecug2_8"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug2_9"
+            android:label="@string/title_activity_ecug2_9"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug3_1"
+            android:label="@string/title_activity_ecug3_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug4_1"
+            android:label="@string/title_activity_ecug4_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug4_2"
+            android:label="@string/title_activity_ecug4_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug4_3"
+            android:label="@string/title_activity_ecug4_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsB"
+            android:label="@string/title_activity_physics_b"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsM"
+            android:label="@string/title_activity_physics_m"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsB1"
+            android:label="@string/title_activity_physics_b1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsB2"
+            android:label="@string/title_activity_physics_b2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsB3"
+            android:label="@string/title_activity_physics_b3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsB4"
+            android:label="@string/title_activity_physics_b4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsM1"
+            android:label="@string/title_activity_physics_m1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsM2"
+            android:label="@string/title_activity_physics_m2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSub1_1"
+            android:label="@string/title_activity_physics_sub1_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSub1_2"
+            android:label="@string/title_activity_physics_sub1_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSub1_3"
+            android:label="@string/title_activity_physics_sub1_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSub2_1"
+            android:label="@string/title_activity_physics_sub2_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSub2_2"
+            android:label="@string/title_activity_physics_sub2_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSub3_1"
+            android:label="@string/title_activity_physics_sub3_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSub3_2"
+            android:label="@string/title_activity_physics_sub3_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSub3_3"
+            android:label="@string/title_activity_physics_sub3_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSub3_4"
+            android:label="@string/title_activity_physics_sub3_4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSub3_5"
+            android:label="@string/title_activity_physics_sub3_5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSubM1_1"
+            android:label="@string/title_activity_physics_sub_m1_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSubM1_2"
+            android:label="@string/title_activity_physics_sub_m1_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSubM1_3"
+            android:label="@string/title_activity_physics_sub_m1_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSubM1_4"
+            android:label="@string/title_activity_physics_sub_m1_4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSubM2_2"
+            android:label="@string/title_activity_physics_sub_m2_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSubM2_1"
+            android:label="@string/title_activity_physics_sub_m2_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSubM2_3"
+            android:label="@string/title_activity_physics_sub_m2_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.PhysicsSub4_1"
+            android:label="@string/title_activity_physics_sub4_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug3_2"
+            android:label="@string/title_activity_ecug3_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Ecug4_4"
+            android:label="@string/title_activity_ecug4_4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs1_1"
+            android:label="@string/title_activity_mcs1_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs1_2"
+            android:label="@string/title_activity_mcs1_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs1_3"
+            android:label="@string/title_activity_mcs1_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs1_4"
+            android:label="@string/title_activity_mcs1_4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs1_5"
+            android:label="@string/title_activity_mcs1_5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs1_6"
+            android:label="@string/title_activity_mcs1_6"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs1_7"
+            android:label="@string/title_activity_mcs1_7"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs1_8"
+            android:label="@string/title_activity_mcs1_8"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs1_9"
+            android:label="@string/title_activity_mcs1_9"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs1_10"
+            android:label="@string/title_activity_mcs1_10"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs1_11"
+            android:label="@string/title_activity_mcs1_11"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs1_12"
+            android:label="@string/title_activity_mcs1_12"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs2_1"
+            android:label="@string/title_activity_mcs2_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs2_2"
+            android:label="@string/title_activity_mcs2_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs2_3"
+            android:label="@string/title_activity_mcs2_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs2_4"
+            android:label="@string/title_activity_mcs2_4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs2_5"
+            android:label="@string/title_activity_mcs2_5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs2_6"
+            android:label="@string/title_activity_mcs2_6"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs2_7"
+            android:label="@string/title_activity_mcs2_7"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.MCs2_8"
+            android:label="@string/title_activity_mcs2_8"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.scratch.ashish.fileserverapp.Cs3_B_Sub12"
+            android:label="@string/title_activity_cs3__b__sub12"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>
