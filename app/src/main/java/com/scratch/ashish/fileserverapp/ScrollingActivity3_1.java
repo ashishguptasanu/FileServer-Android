@@ -70,10 +70,6 @@ public class ScrollingActivity3_1 extends AppCompatActivity implements View.OnCl
     @Override
     public void onClick(View view) {
         switch(view.getId()){
-            case R.id.Card_View3_1_1:
-                Intent intent = new Intent(this, Biotech1.class);
-                startActivity(intent);
-                break;
             case R.id.Card_View3_1_2:
                 Intent intent1 = new Intent(this, Biotech2.class);
                 startActivity(intent1);
