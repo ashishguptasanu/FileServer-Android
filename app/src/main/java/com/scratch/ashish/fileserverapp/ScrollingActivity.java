@@ -109,10 +109,10 @@ public class ScrollingActivity extends AppCompatActivity implements View.OnClick
 
                 break;
             case R.id.Card_View3:
-                //Intent intent3 = new Intent(this, ScrollingActivity3_0.class);
-                //startActivity(intent3);
-                Toast toast3 = Toast.makeText(context, "Launching Soon..", 1);
-                toast3.show();
+                Intent intent3 = new Intent(this, ScrollingActivity3_0.class);
+                startActivity(intent3);
+                //Toast toast3 = Toast.makeText(context, "Launching Soon..", 1);
+                //toast3.show();
                 break;
             case R.id.Card_View4:
                 Intent intent4 = new Intent(this, ScrollingActivity4_0.class);

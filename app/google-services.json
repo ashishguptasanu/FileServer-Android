@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "230183642305-c19t9kcarn7orojv8le8ee7s69ktnkmq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.scratch.ashish.fileserver",
+            "certificate_hash": "53E8E9073C186FA0F6FFE35C08860AC37C546DBD"
+          }
+        },
+        {
           "client_id": "230183642305-ifbguvgkhd9j775l2pdcrnd53dm213id.apps.googleusercontent.com",
           "client_type": 3
         }

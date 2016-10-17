@@ -1,5 +1,6 @@
 package com.scratch.ashish.fileserverapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +13,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,6 +28,8 @@ public class Cs1_B_Sub1 extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ArrayList<AndroidVersions> data;
     private DataAdapter adapter;
+    public Context context;
+    private int n = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,7 @@ public class Cs1_B_Sub1 extends AppCompatActivity {
         setContentView(R.layout.activity_cs1__b__sub1);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         initViews();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -49,6 +54,7 @@ public class Cs1_B_Sub1 extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
+
         //recyclerView.setOnClickListener(new View.OnClickListener() {
         //@Override
         //public void onClick(View view) {
