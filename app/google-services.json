@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "230183642305",
-    "firebase_url": "https://admob-app-id-1659700035.firebaseio.com",
-    "project_id": "admob-app-id-1659700035",
-    "storage_bucket": "admob-app-id-1659700035.appspot.com"
+    "project_number": "423626595997",
+    "firebase_url": "https://fileserver-496df.firebaseio.com",
+    "project_id": "fileserver-496df",
+    "storage_bucket": "fileserver-496df.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:230183642305:android:03824ab5dac3eede",
+        "mobilesdk_app_id": "1:423626595997:android:b163a8ef4ab3c425",
         "android_client_info": {
           "package_name": "com.scratch.ashish.fileserverapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "230183642305-c19t9kcarn7orojv8le8ee7s69ktnkmq.apps.googleusercontent.com",
+          "client_id": "423626595997-k7idlks40dl8uoqlnmudnhp31j141q02.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.scratch.ashish.fileserver",
+            "package_name": "com.scratch.ashish.fileserverapp",
             "certificate_hash": "53E8E9073C186FA0F6FFE35C08860AC37C546DBD"
           }
         },
         {
-          "client_id": "230183642305-ifbguvgkhd9j775l2pdcrnd53dm213id.apps.googleusercontent.com",
+          "client_id": "423626595997-hcdufhqp6ercup2buiga769uboctrp2t.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDyDnaS5OiT0DyH_VPP3lPVXp5VP38u11g"
+          "current_key": "AIzaSyBoTVTG25k0yud8a5AJ084KkrYYIIr3iUQ"
         }
       ],
       "services": {
@@ -37,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423626595997-hcdufhqp6ercup2buiga769uboctrp2t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
