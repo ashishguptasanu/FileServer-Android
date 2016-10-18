@@ -2,11 +2,14 @@ package com.scratch.ashish.fileserverapp;
 
 import android.app.DownloadManager;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,12 +18,13 @@ import java.util.ArrayList;
 /**
  * Created by ashish on 23/8/16.
  */
-public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>  {
+public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> implements View.OnClickListener {
     private ArrayList<AndroidVersions> android;
     public ArrayList<String> list = new ArrayList<>();
     public  String url;
     private Context context;
     public int position;
+
 
 
 
@@ -64,16 +68,23 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>  {
         return android.size();
     }
 
+    @Override
+    public void onClick(View v) {
+
+    }
 
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         public TextView tv_name,tv_version;
 
+
         ArrayList<AndroidVersions> android = new ArrayList<AndroidVersions>();
+
 
 
         public ViewHolder(View view) {
             super(view);
+
 
             tv_name = (TextView)view.findViewById(R.id.tv_name);
             tv_version = (TextView)view.findViewById(R.id.tv_version);
@@ -103,11 +114,6 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>  {
             downloadmanager.enqueue(request);
             Toast toast = Toast.makeText(context,"Your file is now downloading...", (int) 0.3);
             toast.show();
-
-
-
-
-
             }
 
 
