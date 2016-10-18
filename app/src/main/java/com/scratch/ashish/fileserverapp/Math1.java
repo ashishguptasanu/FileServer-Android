@@ -44,6 +44,9 @@ public class Math1 extends AppCompatActivity {
         AdView mAdView = (AdView) findViewById(R.id.adViewM1);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+        View parentLayout = findViewById(android.R.id.content);
+        Snackbar.make(parentLayout,"Please Wait, Loading..", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
         initViews();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

@@ -33,6 +33,9 @@ public class Hss2_Sub3 extends AppCompatActivity {
         setContentView(R.layout.activity_hss2__sub3);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        View parentLayout = findViewById(android.R.id.content);
+        Snackbar.make(parentLayout,"Please Wait, Loading..", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
         initViews();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

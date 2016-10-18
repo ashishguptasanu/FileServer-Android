@@ -34,6 +34,9 @@ public class Cs3_B_Sub8 extends AppCompatActivity {
         setContentView(R.layout.activity_cs3__b__sub8);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        View parentLayout = findViewById(android.R.id.content);
+        Snackbar.make(parentLayout,"Please Wait, Loading..", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
         initViews();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

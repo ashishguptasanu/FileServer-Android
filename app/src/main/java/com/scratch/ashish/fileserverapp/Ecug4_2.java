@@ -39,6 +39,9 @@ public class Ecug4_2 extends AppCompatActivity {
         setContentView(R.layout.activity_ecug4_2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        View parentLayout = findViewById(android.R.id.content);
+        Snackbar.make(parentLayout,"Please Wait, Loading..", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
         initViews();
         context = getApplicationContext();
         MobileAds.initialize(getApplicationContext(), "ca-app-pub-4041777664387265/3136433230");

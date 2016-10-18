@@ -29,7 +29,7 @@ public class Cs1_B_Sub1 extends AppCompatActivity {
     private ArrayList<AndroidVersions> data;
     private DataAdapter adapter;
     public Context context;
-    private int n = 1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
