@@ -94,11 +94,6 @@
             android:name=".ScrollingActivityMAIN"
             android:label="@string/title_activity_scrolling_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <service android:name=".MyFirebaseMessagingService">
             <intent-filter>
@@ -785,6 +780,16 @@
             android:name=".Biotech6"
             android:label="@string/title_activity_biotech6"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Spalsh"
+            android:theme="@style/AppTheme.NoActionBar">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>>
+        </activity>
+
 
     </application>
 
