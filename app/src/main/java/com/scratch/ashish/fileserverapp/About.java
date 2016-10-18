@@ -1,17 +1,27 @@
 package com.scratch.ashish.fileserverapp;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
-public class About extends AppCompatActivity {
+public class About extends AppCompatActivity implements View.OnClickListener{
+    private ImageButton img;
+    private Context context;
+    String facebookUrl = "https://www.facebook.com/fileserverjiit";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+        img = (ImageButton)findViewById(R.id.fb);
+        img.setOnClickListener(this);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -40,4 +50,22 @@ public class About extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-}
+
+    @Override
+    public void onClick(View v) {
+        try {
+            int versionCode = getPackageManager().getPackageInfo("com.facebook.katana", 0).versionCode;
+            if (versionCode >= 3002850) {
+                Uri uri = Uri.parse("fb://facewebmodal/f?href=" + facebookUrl);
+                startActivity(new Intent(Intent.ACTION_VIEW, uri));;
+            } else {
+                // open the Facebook app using the old method (fb://profile/id or fb://page/id)
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/1772396386367522")));
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            // Facebook is not installed. Open the browser
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(facebookUrl)));
+        }
+    }
+    }
+
