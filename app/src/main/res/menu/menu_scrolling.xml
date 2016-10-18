@@ -2,13 +2,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.scratch.ashish.fileserverapp.ScrollingActivity">
-
-    <item
-        android:id="@+id/feedback"
-        android:orderInCategory="100"
-        android:title="@string/feedback"
-        app:showAsAction="never" />
-
     <item
         android:id="@+id/about"
         android:orderInCategory="100"

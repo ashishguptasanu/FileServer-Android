@@ -156,7 +156,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Choose storage location to store downloaded files."
+                        android:text="Default: /storage/sdcard/Downloads"
                         android:layout_weight="0"
                         android:paddingTop="8dp"
                         android:layout_marginLeft="2dp"/>

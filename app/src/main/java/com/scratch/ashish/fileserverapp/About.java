@@ -11,8 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class About extends AppCompatActivity implements View.OnClickListener{
-    private ImageButton img;
+public class About extends AppCompatActivity implements View.OnClickListener {
+    private ImageButton img, img2;
     private Context context;
     String facebookUrl = "https://www.facebook.com/fileserverjiit";
 
@@ -20,9 +20,15 @@ public class About extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-        img = (ImageButton)findViewById(R.id.fb);
+        img = (ImageButton) findViewById(R.id.fb);
         img.setOnClickListener(this);
+        img2 = (ImageButton) findViewById(R.id.play_store);
+        img2.setOnClickListener(this);
+
+
     }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -43,8 +49,7 @@ public class About extends AppCompatActivity implements View.OnClickListener{
             Intent intent_setting = new Intent(this, Settings.class);
             startActivity(intent_setting);
             return true;
-        }
-        else if(id == R.id.about) {
+        } else if (id == R.id.about) {
             Intent intent_about = new Intent(this, About.class);
             startActivity(intent_about);
         }
@@ -53,19 +58,33 @@ public class About extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        try {
-            int versionCode = getPackageManager().getPackageInfo("com.facebook.katana", 0).versionCode;
-            if (versionCode >= 3002850) {
-                Uri uri = Uri.parse("fb://facewebmodal/f?href=" + facebookUrl);
-                startActivity(new Intent(Intent.ACTION_VIEW, uri));;
-            } else {
-                // open the Facebook app using the old method (fb://profile/id or fb://page/id)
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/1772396386367522")));
-            }
-        } catch (PackageManager.NameNotFoundException e) {
-            // Facebook is not installed. Open the browser
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(facebookUrl)));
+        switch (v.getId()) {
+            case R.id.fb:
+                try {
+                    int versionCode = getPackageManager().getPackageInfo("com.facebook.katana", 0).versionCode;
+                    if (versionCode >= 3002850) {
+                        Uri uri = Uri.parse("fb://facewebmodal/f?href=" + facebookUrl);
+                        startActivity(new Intent(Intent.ACTION_VIEW, uri));
+                        ;
+                    } else {
+                        // open the Facebook app using the old method (fb://profile/id or fb://page/id)
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/1772396386367522")));
+                    }
+                } catch (PackageManager.NameNotFoundException e) {
+                    // Facebook is not installed. Open the browser
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(facebookUrl)));
+                }
+                break;
+            case R.id.play_store:
+                final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                }
+                break;
+        }
         }
     }
-    }
+
 

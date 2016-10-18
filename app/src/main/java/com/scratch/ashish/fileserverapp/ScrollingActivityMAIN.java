@@ -21,7 +21,6 @@ import com.google.firebase.iid.FirebaseInstanceId;
 public class ScrollingActivityMAIN extends AppCompatActivity implements View.OnClickListener {
     protected CardView card1, card2;
     private Context context;
-    private static final String TAG = "ScrollingActivityMAIN";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +29,6 @@ public class ScrollingActivityMAIN extends AppCompatActivity implements View.OnC
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        String token = FirebaseInstanceId.getInstance().getToken();
-        Log.d(TAG, "Token: " + token);
-        System.out.println(token);
 
         context = getApplicationContext();
         MobileAds.initialize(getApplicationContext(), "ca-app-pub-4041777664387265/3136433230");
