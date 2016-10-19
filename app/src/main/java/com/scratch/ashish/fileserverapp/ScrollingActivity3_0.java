@@ -69,6 +69,10 @@ public class ScrollingActivity3_0 extends AppCompatActivity implements View.OnCl
                 Intent intent = new Intent(this, ScrollingActivity3_1.class);
                 startActivity(intent);
                 break;
+            case R.id.Card_View3_2:
+                Intent intent2 = new Intent(this, ScrollingActivity3_2.class);
+                startActivity(intent2);
+                break;
         }
     }
 }
