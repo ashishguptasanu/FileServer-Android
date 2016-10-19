@@ -40,7 +40,6 @@ public class Cs1_B_Sub1 extends AppCompatActivity {
         View parentLayout = findViewById(android.R.id.content);
         Snackbar.make(parentLayout,"Please Wait, Loading..", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show();
-
         initViews();
 
 
