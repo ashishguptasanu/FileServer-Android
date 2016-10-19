@@ -50,7 +50,7 @@ public class Biotech5_1 extends AppCompatActivity {
         });
     }
     private void initViews(){
-        recyclerView = (RecyclerView)findViewById(R.id.Biotech4_3);
+        recyclerView = (RecyclerView)findViewById(R.id.Biotech5_1);
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -68,7 +68,7 @@ public class Biotech5_1 extends AppCompatActivity {
                 .baseUrl("https://s3.ap-south-1.amazonaws.com")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        Bio4_3 request = retrofit.create(Bio4_3.class);
+        Bio5_1 request = retrofit.create(Bio5_1.class);
         Call<JSONResponse> call = request.getJSON();
         call.enqueue(new Callback<JSONResponse>() {
             @Override
