@@ -847,6 +847,10 @@
         <activity
             android:name=".Biotech6_3"
             android:label="@string/title_activity_biotech6_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ScrollingActivity3_2"
+            android:label="@string/title_activity_scrolling_activity3_2"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
