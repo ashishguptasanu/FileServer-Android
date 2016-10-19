@@ -815,6 +815,38 @@
         <activity
             android:name=".Biotech4_3"
             android:label="@string/title_activity_biotech4_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech5_1"
+            android:label="@string/title_activity_biotech5_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech5_2"
+            android:label="@string/title_activity_biotech5_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech5_3"
+            android:label="@string/title_activity_biotech5_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech5_4"
+            android:label="@string/title_activity_biotech5_4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech5_5"
+            android:label="@string/title_activity_biotech5_5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech6_1"
+            android:label="@string/title_activity_biotech6_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech6_2"
+            android:label="@string/title_activity_biotech6_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech6_3"
+            android:label="@string/title_activity_biotech6_3"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

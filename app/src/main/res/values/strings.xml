@@ -295,6 +295,14 @@
     <string name="title_activity_biotech4_1">Biotech4_1</string>
     <string name="title_activity_biotech4_2">Biotech4_2</string>
     <string name="title_activity_biotech4_3">Biotech4_3</string>
+    <string name="title_activity_biotech5_1">Biotech5_1</string>
+    <string name="title_activity_biotech5_2">Biotech5_2</string>
+    <string name="title_activity_biotech5_3">Biotech5_3</string>
+    <string name="title_activity_biotech5_4">Biotech5_4</string>
+    <string name="title_activity_biotech5_5">Biotech5_5</string>
+    <string name="title_activity_biotech6_1">Biotech6_1</string>
+    <string name="title_activity_biotech6_2">Biotech6_2</string>
+    <string name="title_activity_biotech6_3">Biotech6_3</string>
 
 
 </resources>
