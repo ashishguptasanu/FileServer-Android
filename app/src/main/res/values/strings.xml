@@ -284,6 +284,17 @@
     <string name="title_activity_cs3__b__sub12">Files</string>
     <string name="title_activity_biotech5">Biotech5</string>
     <string name="title_activity_biotech6">Biotech6</string>
+    <string name="title_activity_biotech2_1">Biotech2_1</string>
+    <string name="title_activity_biotech2_2">Biotech2_2</string>
+    <string name="title_activity_biotech2_3">Biotech2_3</string>
+    <string name="title_activity_biotech2_4">Biotech2_4</string>
+    <string name="title_activity_biotech2_5">Biotech2_5</string>
+    <string name="title_activity_biotech3_1">Biotech3_1</string>
+    <string name="title_activity_biotech3_2">Biotech3_2</string>
+    <string name="title_activity_biotech3_3">Biotech3_3</string>
+    <string name="title_activity_biotech4_1">Biotech4_1</string>
+    <string name="title_activity_biotech4_2">Biotech4_2</string>
+    <string name="title_activity_biotech4_3">Biotech4_3</string>
 
 
 </resources>

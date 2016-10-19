@@ -93,9 +93,7 @@
         <activity
             android:name=".ScrollingActivityMAIN"
             android:label="@string/title_activity_scrolling_activity_main"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SystemNetworks"
             android:label="@string/title_activity_system_networks"
@@ -484,7 +482,6 @@
             android:name=".Math11"
             android:label="@string/title_activity_math11"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".Ecug1"
             android:label="@string/title_activity_ecug1"
@@ -764,18 +761,61 @@
         <activity
             android:name=".Biotech6"
             android:label="@string/title_activity_biotech6"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Spalsh"
             android:theme="@style/AppTheme.NoActionBar">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            >
         </activity>
-
-
+        <activity
+            android:name=".Biotech2_1"
+            android:label="@string/title_activity_biotech2_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech2_2"
+            android:label="@string/title_activity_biotech2_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech2_3"
+            android:label="@string/title_activity_biotech2_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech2_4"
+            android:label="@string/title_activity_biotech2_4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech2_5"
+            android:label="@string/title_activity_biotech2_5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech3_1"
+            android:label="@string/title_activity_biotech3_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech3_2"
+            android:label="@string/title_activity_biotech3_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech3_3"
+            android:label="@string/title_activity_biotech3_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech4_1"
+            android:label="@string/title_activity_biotech4_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech4_2"
+            android:label="@string/title_activity_biotech4_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Biotech4_3"
+            android:label="@string/title_activity_biotech4_3"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
