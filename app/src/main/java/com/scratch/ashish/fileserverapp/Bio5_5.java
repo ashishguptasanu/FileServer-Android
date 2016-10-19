@@ -8,6 +8,6 @@ import retrofit2.http.GET;
  */
 
 public interface Bio5_5 {
-    @GET("/rufly/Json/Biotech/4rthyear/4_3.txt")
+    @GET("/rufly/Json/Biotech/5thyear/5_5.txt")
     Call<JSONResponse> getJSON();
 }
