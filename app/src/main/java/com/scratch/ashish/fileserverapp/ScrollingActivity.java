@@ -21,7 +21,7 @@ import com.google.android.gms.ads.MobileAds;
 public class ScrollingActivity extends AppCompatActivity implements View.OnClickListener {
     protected CardView card , card1,card2,card3,card6,card5,card4;
     private Context context;
-    private String msg = "Last Updated: yesterday";
+    private String msg = "Next Update: Saturday";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -27,7 +27,7 @@ public class ScrollingActivity3_2 extends AppCompatActivity implements View.OnCl
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Next Update: Saturday", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });

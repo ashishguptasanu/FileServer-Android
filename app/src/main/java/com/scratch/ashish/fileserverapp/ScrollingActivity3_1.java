@@ -1,5 +1,6 @@
 package com.scratch.ashish.fileserverapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,9 +11,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class ScrollingActivity3_1 extends AppCompatActivity implements View.OnClickListener {
     private CardView card,card1,card2,card3;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +23,7 @@ public class ScrollingActivity3_1 extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_scrolling_activity3_1);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        context = getApplicationContext();
 
         card = (CardView)findViewById(R.id.Card_View3_1_1);
         card.setOnClickListener(this);
@@ -34,7 +38,7 @@ public class ScrollingActivity3_1 extends AppCompatActivity implements View.OnCl
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Next Update: Saturday", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -70,6 +74,10 @@ public class ScrollingActivity3_1 extends AppCompatActivity implements View.OnCl
     @Override
     public void onClick(View view) {
         switch(view.getId()){
+            case R.id.Card_View3_1_1:
+                Toast toast = Toast.makeText(context, "No Subjects available", 1);
+                toast.show();
+                break;
             case R.id.Card_View3_1_2:
                 Intent intent1 = new Intent(this, Biotech2.class);
                 startActivity(intent1);
