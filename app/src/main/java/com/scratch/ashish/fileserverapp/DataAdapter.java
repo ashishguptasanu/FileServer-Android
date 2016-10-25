@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.Uri;
+import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -21,6 +22,7 @@ import java.util.ArrayList;
 
 import static android.R.attr.action;
 import static android.content.Context.DOWNLOAD_SERVICE;
+import static android.content.Intent.getIntent;
 
 /**
  * Created by ashish on 23/8/16.
@@ -31,6 +33,10 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> im
     public  String url;
     private Context context;
     public int position;
+    private DownloadManager downloadManager = null;
+    private long id;
+
+
 
 
 
@@ -51,6 +57,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> im
     public DataAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_row, viewGroup, false);
         return new ViewHolder(view);
+
+
     }
 
 
@@ -81,6 +89,18 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> im
     public void onClick(View v) {
 
     }
+    /*public class DownloadBroadcastReceiver extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+
+            if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(action)) {
+                //request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                context.registerReceiver(receiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+            }
+        }
+    }*/
 
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -96,8 +116,10 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> im
             super(view);
 
 
+
             tv_name = (TextView)view.findViewById(R.id.tv_name);
             tv_version = (TextView)view.findViewById(R.id.tv_version);
+
 
             view.setOnClickListener(this);
             for(int i=0; i< android.size();i++){
@@ -114,17 +136,23 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> im
         public void onClick(View view) {
             position = getAdapterPosition();
             //System.out.println(position);
-            System.out.println(list.get(position));
             String servicestring = DOWNLOAD_SERVICE;
             DownloadManager downloadmanager;
             downloadmanager = (DownloadManager) context.getSystemService(servicestring);
             Uri uri = Uri
                     .parse(list.get(position));
-            DownloadManager.Request request = new DownloadManager.Request(uri);
+             DownloadManager.Request request = new DownloadManager.Request(uri);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+                request.allowScanningByMediaScanner();
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+            }
             downloadmanager.enqueue(request);
 
             Toast toast = Toast.makeText(context,"Your file is now downloading...", (int) 0.3);
             toast.show();
+
+
+
 
 
             }
@@ -134,5 +162,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> im
     }
 
 
+
+
+
 }
+
 
