@@ -8,6 +8,6 @@ import retrofit2.http.GET;
  */
 
 public interface Ecpg5 {
-    @GET("/rufly/Json/ecug/ecug1/ecug1_ES1.txt")
+    @GET("/rufly/Json/ecpg/1_5.txt")
     Call<JSONResponse> getJSON();
 }
