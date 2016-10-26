@@ -83,8 +83,8 @@ public class ScrollingActivity2_0 extends AppCompatActivity implements View.OnCl
                 startActivity(intent);
                 break;
             case R.id.Card_View2_2:
-                Toast toast = Toast.makeText(context, "Launching Soon..", 1);
-                toast.show();
+                Intent intent2 = new Intent(this, ScrollingActivity2_2.class);
+                startActivity(intent2);
                 break;
 
 

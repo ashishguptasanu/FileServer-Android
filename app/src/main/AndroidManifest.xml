@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <supports-screens
         android:anyDensity="true"
         android:largeScreens="true"
@@ -20,18 +21,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <service
-            android:name=".MyFirebaseMessagingService">
+        <service android:name=".MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@mipmap/new_scratch" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
+
         <activity
             android:name=".ScrollingActivity"
             android:label="@string/name"
@@ -871,6 +873,38 @@
         <activity
             android:name=".ScrollingActivity3_2"
             android:label="@string/title_activity_scrolling_activity3_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ScrollingActivity2_2"
+            android:label="@string/title_activity_scrolling_activity2_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ecpg1"
+            android:label="@string/title_activity_ecpg1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ecpg2"
+            android:label="@string/title_activity_ecpg2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ecpg3"
+            android:label="@string/title_activity_ecpg3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ecpg4"
+            android:label="@string/title_activity_ecpg4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ecpg5"
+            android:label="@string/title_activity_ecpg5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ecpg6"
+            android:label="@string/title_activity_ecpg6"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ecpg7"
+            android:label="@string/title_activity_ecpg7"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
