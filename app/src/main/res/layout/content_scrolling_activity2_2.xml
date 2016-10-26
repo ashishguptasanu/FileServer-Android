@@ -214,14 +214,14 @@
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:gravity="center_vertical">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Microelectronics Devices Tech"
+                        android:text="Microelectronics Devices Technology"
                         android:layout_weight="0"
                         android:layout_marginLeft="15dp"/>
 
@@ -248,7 +248,7 @@
             android:layout_height="70dp"
             card_view:cardCornerRadius="1dp"
             android:padding="7dp"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="315dp"
             android:clickable="true"
             android:contextClickable="false"
             android:focusable="true"
@@ -305,7 +305,7 @@
             android:layout_height="70dp"
             card_view:cardCornerRadius="1dp"
             android:padding="7dp"
-            android:layout_marginTop="375dp"
+            android:layout_marginTop="390dp"
             android:clickable="true"
             android:contextClickable="false"
             android:focusable="true"
@@ -360,7 +360,7 @@
             android:layout_gravity = "center"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_marginTop="450dp"
+            android:layout_marginTop="465dp"
             card_view:cardCornerRadius="1dp"
             android:padding="7dp"
             android:clickable="true"
