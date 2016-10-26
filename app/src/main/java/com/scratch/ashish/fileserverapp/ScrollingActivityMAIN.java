@@ -2,6 +2,7 @@ package com.scratch.ashish.fileserverapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +13,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -38,6 +40,7 @@ public class ScrollingActivityMAIN extends AppCompatActivity implements View.OnC
         card2 = (CardView) findViewById(R.id.Card_View7);
         assert card2 != null;
         card2.setOnClickListener(this);
+        isNetworkConnected();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +50,21 @@ public class ScrollingActivityMAIN extends AppCompatActivity implements View.OnC
                         .setAction("Action", null).show();
             }
         });
+    }
+    public boolean isNetworkConnected() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (cm.getActiveNetworkInfo() == null) {
+            context = getApplicationContext();
+            Toast toast = Toast.makeText(context, "You are not connected to any network", 1);
+            toast.show();
+        }
+        else{
+            Toast toast = Toast.makeText(context, "Connected", 1);
+            toast.show();
+        }
+        return cm.getActiveNetworkInfo() != null;
+
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

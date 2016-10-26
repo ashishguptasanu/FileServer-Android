@@ -2,6 +2,7 @@ package com.scratch.ashish.fileserverapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -37,21 +38,22 @@ public class Cs1_B_Sub1 extends AppCompatActivity {
         setContentView(R.layout.activity_cs1__b__sub1);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        initViews();
         View parentLayout = findViewById(android.R.id.content);
         Snackbar.make(parentLayout,"Please Wait, Loading..", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show();
-        initViews();
-
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Next Update: Saturday", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
             }
         });
+
     }
+
     private void initViews(){
         recyclerView = (RecyclerView)findViewById(R.id.card_recycler_view_Cs1_sub1);
         recyclerView.setHasFixedSize(true);
@@ -66,7 +68,7 @@ public class Cs1_B_Sub1 extends AppCompatActivity {
         // });
         loadJSON();
     }
-    private void loadJSON(){
+    public void loadJSON(){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://s3.ap-south-1.amazonaws.com")
                 .addConverterFactory(GsonConverterFactory.create())
