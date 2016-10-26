@@ -305,13 +305,13 @@
     <string name="title_activity_biotech6_3">Files</string>
     <string name="title_activity_scrolling_activity3_2">Choose Year</string>
     <string name="title_activity_scrolling_activity2_2">Subjects</string>
-    <string name="title_activity_ecpg1">ecpg1</string>
-    <string name="title_activity_ecpg2">ecpg2</string>
-    <string name="title_activity_ecpg3">ecpg3</string>
-    <string name="title_activity_ecpg4">ecpg4</string>
-    <string name="title_activity_ecpg5">ecpg5</string>
-    <string name="title_activity_ecpg6">ecpg6</string>
-    <string name="title_activity_ecpg7">ecpg7</string>
+    <string name="title_activity_ecpg1">Files</string>
+    <string name="title_activity_ecpg2">Files</string>
+    <string name="title_activity_ecpg3">Files</string>
+    <string name="title_activity_ecpg4">Files</string>
+    <string name="title_activity_ecpg5">Files</string>
+    <string name="title_activity_ecpg6">Files</string>
+    <string name="title_activity_ecpg7">Files</string>
 
 
 </resources>
