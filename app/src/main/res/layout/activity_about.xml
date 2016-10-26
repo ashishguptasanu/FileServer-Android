@@ -80,8 +80,8 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="3rd Year(BT)"
                 android:layout_alignBottom="@+id/Card_View1_2"
-                android:layout_marginLeft="55dp"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="end" />
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"

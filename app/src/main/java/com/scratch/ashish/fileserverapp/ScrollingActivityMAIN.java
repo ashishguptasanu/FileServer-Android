@@ -31,10 +31,6 @@ public class ScrollingActivityMAIN extends AppCompatActivity implements View.OnC
 
 
         context = getApplicationContext();
-        MobileAds.initialize(getApplicationContext(), "ca-app-pub-4041777664387265/3136433230");
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
 
         card1 = (CardView) findViewById(R.id.Card_View_main);
         assert card1 != null;
