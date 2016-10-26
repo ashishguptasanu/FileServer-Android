@@ -6,11 +6,11 @@
     android:gravity="center_vertical|center_horizontal">
 
     <ImageView
-        android:layout_width="102dp"
+        android:layout_width="102sp"
         app:srcCompat="@mipmap/new_scratch"
         android:id="@+id/imageView"
         android:adjustViewBounds="false"
         android:baselineAlignBottom="false"
-        android:layout_height="102dp" />
+        android:layout_height="102sp" />
 
 </RelativeLayout>
