@@ -20,6 +20,9 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.iid.FirebaseInstanceId;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 public class ScrollingActivityMAIN extends AppCompatActivity implements View.OnClickListener {
     protected CardView card1, card2;
     private Context context;

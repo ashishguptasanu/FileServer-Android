@@ -35,10 +35,11 @@ public class ecpg5 extends AppCompatActivity {
         setContentView(R.layout.activity_ecpg5);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        initViews();
         View parentLayout = findViewById(android.R.id.content);
         Snackbar.make(parentLayout,"Please Wait, Loading..", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show();
-        initViews();
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
