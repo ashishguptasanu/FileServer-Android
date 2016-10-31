@@ -9,19 +9,12 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.firebase.iid.FirebaseInstanceId;
-
-import java.net.InetAddress;
-import java.net.UnknownHostException;
+import com.scratch.ashish.fileserverapp.activities.ListFileActivity;
 
 public class ScrollingActivityMAIN extends AppCompatActivity implements View.OnClickListener {
     protected CardView card1, card2;
@@ -103,7 +96,7 @@ public class ScrollingActivityMAIN extends AppCompatActivity implements View.OnC
             case R.id.Card_View_main:
                 //Toast toast = Toast.makeText(context, "Launching Soon..", 1);
                 //toast.show();
-                Intent intent = new Intent(this, ScrollingActivity.class);
+                Intent intent = new Intent(this, ListFileActivity.class);
                 startActivity(intent);
                 break;
             case R.id.Card_View7:
