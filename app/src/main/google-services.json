@@ -1,0 +1,50 @@
+{
+  "project_info": {
+    "project_number": "230183642305",
+    "firebase_url": "https://admob-app-id-1659700035.firebaseio.com",
+    "project_id": "admob-app-id-1659700035",
+    "storage_bucket": "admob-app-id-1659700035.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230183642305:android:03824ab5dac3eede",
+        "android_client_info": {
+          "package_name": "com.scratch.ashish.fileserver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "230183642305-c19t9kcarn7orojv8le8ee7s69ktnkmq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.scratch.ashish.fileserver",
+            "certificate_hash": "53E8E9073C186FA0F6FFE35C08860AC37C546DBD"
+          }
+        },
+        {
+          "client_id": "230183642305-ifbguvgkhd9j775l2pdcrnd53dm213id.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyDnaS5OiT0DyH_VPP3lPVXp5VP38u11g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
