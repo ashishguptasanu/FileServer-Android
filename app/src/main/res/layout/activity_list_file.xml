@@ -22,7 +22,7 @@
         android:id="@+id/college_spinner"
         android:prompt="@string/college_prompt"
         android:spinnerMode="dialog"
-        >
+        android:outlineProvider="background">
 
 
     </android.support.v7.widget.AppCompatSpinner>
