@@ -313,5 +313,11 @@
     <string name="title_activity_ecpg6">Files</string>
     <string name="title_activity_ecpg7">Files</string>
 
+    <string name="college_prompt">Select a college</string>
+    <string name="course_prompt">Select a course</string>
+    <string name="year_prompt">Select a year</string>
+    <string name="subject_prompt">Select a subject</string>
+    <string name="branch_prompt">Select a branch</string>
+
 
 </resources>
