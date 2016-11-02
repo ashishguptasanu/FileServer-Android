@@ -2,10 +2,9 @@
 <android.support.v7.widget.CardView android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    card_view:cardElevation="4dp"
+    card_view:cardElevation="1dp"
     card_view:cardCornerRadius="1dp"
-    android:layout_marginBottom="4dp"
-    android:padding="7dp"
+    android:layout_marginBottom="1dp"
     android:contextClickable="false"
     android:focusable="false"
     android:foreground="?android:selectableItemBackground"
@@ -18,13 +17,13 @@
         android:layout_margin="3dp"
         android:orientation="horizontal"
         android:gravity="center_horizontal"
-        android:paddingRight="10dp">
+        android:layout_marginRight="10dp">
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/ic_description_black_24dp"
             android:paddingRight="5dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="10dp"
             android:paddingLeft="5dp"/>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -37,13 +36,13 @@
             <TextView
                 android:id="@+id/tv_name"
                 android:layout_marginTop="1dp"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"/>
             <TextView
                 android:id="@+id/tv_version"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"/>
@@ -56,12 +55,11 @@
         </LinearLayout>
         <ImageView
             android:id = "@+id/image"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/ic_get_app_black_24dp"
-            android:paddingRight="5dp"
-            android:paddingTop="2dp"
-            android:paddingLeft="5dp"
-            android:layout_marginTop="6dp"/>
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"/>
     </LinearLayout>
 </android.support.v7.widget.CardView>

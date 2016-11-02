@@ -2,7 +2,6 @@ package com.scratch.ashish.fileserverapp.activities;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -13,7 +12,6 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
 import com.scratch.ashish.fileserverapp.R;
 import com.scratch.ashish.fileserverapp.models.Branch;
 import com.scratch.ashish.fileserverapp.models.College;
@@ -21,6 +19,7 @@ import com.scratch.ashish.fileserverapp.models.CollegeResponse;
 import com.scratch.ashish.fileserverapp.models.Course;
 import com.scratch.ashish.fileserverapp.models.Subject;
 import com.scratch.ashish.fileserverapp.models.Year;
+import com.scratch.ashish.fileserverapp.models.json;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -30,10 +29,14 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ListFileActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
     String url = "https://s3.ap-south-1.amazonaws.com/rufly/new+json";
@@ -48,18 +51,14 @@ public class ListFileActivity extends AppCompatActivity implements AdapterView.O
     List<Year> years = new ArrayList<>();
     List<Course> courses = new ArrayList<>();
     List<Subject> subjects = new ArrayList<>();
+    private ArrayList<CollegeResponse> data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_file);
         initializeViews();
-
-        new RetrieveFeedTask().execute(url);
-
-
-
-
-
+        loadJSON();
+        //new RetrieveFeedTask().execute(url);
     }
 
     private void initializeViews() {
@@ -166,7 +165,7 @@ public class ListFileActivity extends AppCompatActivity implements AdapterView.O
         }
     }
 
-    class RetrieveFeedTask extends AsyncTask<Object, Object, List<College>> {
+    /*class RetrieveFeedTask extends AsyncTask<Object, Object, List<College>> {
 
         private Exception exception;
 
@@ -184,6 +183,28 @@ public class ListFileActivity extends AppCompatActivity implements AdapterView.O
             colleges = feed;
             populateCollegeSpinner ();
         }
+    }*/
+    private void loadJSON(){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://s3.ap-south-1.amazonaws.com")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        json request = retrofit.create(json .class);
+        Call<CollegeResponse> call = request.getJSON();
+        call.enqueue(new Callback<CollegeResponse>() {
+            @Override
+            public void onResponse(Call<CollegeResponse> call, Response<CollegeResponse> response) {
+
+                CollegeResponse jsonResponse = response.body();
+                colleges = jsonResponse.getColleges();
+                populateCollegeSpinner();
+            }
+
+            @Override
+            public void onFailure(Call<CollegeResponse> call, Throwable t) {
+                Log.d("Error",t.getMessage());
+            }
+        });
     }
 
     private void populateCollegeSpinner() {
