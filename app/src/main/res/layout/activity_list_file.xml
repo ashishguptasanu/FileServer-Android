@@ -14,7 +14,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="select college"/>
+        android:text="Select College"/>
     <android.support.v7.widget.AppCompatSpinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="select college"/>
+        android:text="Select Branch"/>
 
     <android.support.v7.widget.AppCompatSpinner
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="select college"/>
+        android:text="Select Course"/>
 
     <android.support.v7.widget.AppCompatSpinner
         android:layout_width="match_parent"
@@ -60,7 +60,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="select college"/>
+        android:text="Select Year"/>
 
     <android.support.v7.widget.AppCompatSpinner
         android:layout_width="match_parent"
@@ -75,7 +75,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="select college"/>
+        android:text="Select Subject"/>
     <android.support.v7.widget.AppCompatSpinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -85,11 +85,15 @@
         android:spinnerMode="dialog"/>
 
 
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/submit"
-        android:text = "Submit"/>
+        android:textColor="#fff"
+        android:layout_gravity="center"
+        android:background="@drawable/my_button"
+        android:text = "Submit"
+        android:elevation="0dp"
+        android:layout_marginTop="10dp" />
 
 </LinearLayout>

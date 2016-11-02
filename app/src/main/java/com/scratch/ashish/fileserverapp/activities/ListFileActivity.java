@@ -102,7 +102,6 @@ public class ListFileActivity extends AppCompatActivity implements AdapterView.O
         switch (parent.getId()){
             case R.id.college_spinner:
                 selectedCollege = collegeSpinner.getSelectedItemPosition();
-                Toast.makeText(this, "position" + String.valueOf(position), Toast.LENGTH_SHORT ).show();
                 branchSpinner.setEnabled(true);
                 branchSpinner.setOnItemSelectedListener(this);
                 populateBranchSpinner();
@@ -111,27 +110,23 @@ public class ListFileActivity extends AppCompatActivity implements AdapterView.O
             case R.id.branch_spinner:
                 selectedBranch = branchSpinner.getSelectedItemPosition();
                 courseSpinner.setEnabled(true);
-                Toast.makeText(this, "position" + String.valueOf(position), Toast.LENGTH_SHORT ).show();
                 courseSpinner.setOnItemSelectedListener(this);
                 populateCourseSpinner();
                 break;
             case R.id.course_spinner:
                 selectedCourse = courseSpinner.getSelectedItemPosition();
                 yearSpinner.setEnabled(true);
-                Toast.makeText(this, "position" + String.valueOf(position), Toast.LENGTH_SHORT ).show();
                 yearSpinner.setOnItemSelectedListener(this);
                 populateYearSpinner();
                 break;
             case R.id.year_spinner:
                 selectedYear = yearSpinner.getSelectedItemPosition();
                 subjectSpinner.setEnabled(true);
-                Toast.makeText(this, "position" + String.valueOf(position), Toast.LENGTH_SHORT ).show();
                 subjectSpinner.setOnItemSelectedListener(this);
                 populateSubjectSpinner();
                 break;
             case R.id.subject_spinner:
                 selectedSubject = subjectSpinner.getSelectedItemPosition();
-                Toast.makeText(this, "position" + String.valueOf(position), Toast.LENGTH_SHORT ).show();
                 Subject selctedSubject = (Subject) parent.getSelectedItem();
                 selectedSubjectId = selctedSubject.getSubjectId();
                 btn.setOnClickListener(this);
@@ -152,11 +147,14 @@ public class ListFileActivity extends AppCompatActivity implements AdapterView.O
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.submit:
-                if(selectedBranch != 0 || selectedSubject !=0 || selectedCollege != 0 || selectedYear != 0 || selectedCourse != 0 ){
+                if(selectedBranch != 0 && selectedSubject !=0 && selectedCollege != 0 && selectedYear != 0 && selectedCourse != 0 ){
                     Intent intent = new Intent(this, FinalFile.class);
                     intent.putExtra("subjectid", selectedSubjectId);
                     startActivity(intent);
                     System.out.println(selectedCollege+ selectedBranch + selectedCourse + selectedYear + selectedSubject);
+                }
+                else{
+                    Toast.makeText(this, "Select all fields" , Toast.LENGTH_SHORT ).show();
                 }
                 break;
 
@@ -187,6 +185,7 @@ public class ListFileActivity extends AppCompatActivity implements AdapterView.O
         ArrayAdapter<College> dataAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, colleges);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         collegeSpinner.setAdapter(dataAdapter);
+
 
     }
     private void populateBranchSpinner() {
