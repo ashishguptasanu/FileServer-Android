@@ -1,5 +1,6 @@
 package com.scratch.ashish.fileserverapp.activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -40,6 +41,7 @@ public class ListFileActivity extends AppCompatActivity implements AdapterView.O
     int selectedCollege, selectedBranch, selectedYear, selectedCourse, selectedSubject;
     Button btn;
     String selectedSubjectId;
+    Context context;
 
     List<College> colleges = new ArrayList<>();
     List<Branch> branches = new ArrayList<>();
@@ -51,7 +53,10 @@ public class ListFileActivity extends AppCompatActivity implements AdapterView.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_file);
         initializeViews();
+
         new RetrieveFeedTask().execute(url);
+
+
 
 
 
