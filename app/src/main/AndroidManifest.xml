@@ -45,7 +45,6 @@
             </intent-filter>
             >
         </activity>
-        <activity android:name=".activities.MainActivity" />
         <activity
             android:name=".activities.ListFileActivity"
             android:screenOrientation="portrait" />

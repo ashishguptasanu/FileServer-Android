@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -10,138 +11,198 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
-            <TextView
+            android:padding="8dp">
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Select Your College"
-                android:textSize="16dp"
-                android:textColor="@color/colorPrimary"/>
+                app:cardCornerRadius="2dp"
+                android:layout_marginBottom="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Select Your College"
+                        android:textSize="16dp"
+                        android:textColor="@color/colorPrimary"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_school_black_24dp"/>
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="12dp"
+                            android:id="@+id/college_spinner"
+                            android:prompt="@string/college_prompt"
+                            android:spinnerMode="dialog"
+                            android:outlineProvider="background">
+
+
+                        </android.support.v7.widget.AppCompatSpinner>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="2dp"
+            android:layout_marginBottom="5dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/ic_school_black_24dp"/>
-                <android.support.v7.widget.AppCompatSpinner
+                android:orientation="vertical">
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="12dp"
-                    android:id="@+id/college_spinner"
-                    android:prompt="@string/college_prompt"
-                    android:spinnerMode="dialog"
-                    android:outlineProvider="background">
+                    android:text="Select Branch"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/branch"/>
 
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:id="@+id/branch_spinner"
+                        android:prompt="@string/branch_prompt"
+                        android:spinnerMode="dialog">
 
-                </android.support.v7.widget.AppCompatSpinner>
+                    </android.support.v7.widget.AppCompatSpinner>
             </LinearLayout>
+            </LinearLayout>
+            </android.support.v7.widget.CardView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Select Branch"
-                android:textColor="@color/colorPrimary"
-                android:layout_marginTop="10dp"
-                android:textSize="16dp"/>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="2dp"
+            android:layout_marginBottom="5dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/branch"/>
-
-                <android.support.v7.widget.AppCompatSpinner
+                android:orientation="vertical">
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="12dp"
-                    android:id="@+id/branch_spinner"
-                    android:prompt="@string/branch_prompt"
-                    android:spinnerMode="dialog">
+                    android:text="Select Course"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/course"/>
 
-                </android.support.v7.widget.AppCompatSpinner>
-            </LinearLayout>
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:id="@+id/course_spinner"
+                        android:prompt="@string/course_prompt"
+                        android:spinnerMode="dialog">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Select Course"
-                android:textColor="@color/colorPrimary"
-                android:layout_marginTop="10dp"
-                android:textSize="16dp"/>
+                    </android.support.v7.widget.AppCompatSpinner>
+                </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="2dp"
+            android:layout_marginBottom="5dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/course"/>
-
-                <android.support.v7.widget.AppCompatSpinner
+                android:orientation="vertical">
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="12dp"
-                    android:id="@+id/course_spinner"
-                    android:prompt="@string/course_prompt"
-                    android:spinnerMode="dialog">
+                    android:text="Select Year"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/year"/>
 
-                </android.support.v7.widget.AppCompatSpinner>
-            </LinearLayout>
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:id="@+id/year_spinner"
+                        android:prompt="@string/year_prompt"
+                        android:spinnerMode="dialog">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Select Year"
-                android:textColor="@color/colorPrimary"
-                android:layout_marginTop="10dp"
-                android:textSize="16dp"/>
+                    </android.support.v7.widget.AppCompatSpinner>
+                </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="2dp"
+            android:layout_marginBottom="5dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/year"/>
-
-                <android.support.v7.widget.AppCompatSpinner
+                android:orientation="vertical">
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="12dp"
-                    android:id="@+id/year_spinner"
-                    android:prompt="@string/year_prompt"
-                    android:spinnerMode="dialog">
-
-                </android.support.v7.widget.AppCompatSpinner>
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Select Subject"
-                android:textColor="@color/colorPrimary"
-                android:layout_marginTop="10dp"
-                android:textSize="16dp"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/ic_folder_open_black_24dp"/>
-                <android.support.v7.widget.AppCompatSpinner
+                    android:text="Select Subject"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp"/>
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/subject_spinner"
-                    android:prompt="@string/subject_prompt"
-                    android:layout_margin="12dp"
-                    android:spinnerMode="dialog"/>
-            </LinearLayout>
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_folder_open_black_24dp"/>
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/subject_spinner"
+                        android:prompt="@string/subject_prompt"
+                        android:layout_margin="12dp"
+                        android:spinnerMode="dialog"/>
+                </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
 
 
         </LinearLayout>

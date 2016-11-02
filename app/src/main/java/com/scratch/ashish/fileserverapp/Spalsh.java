@@ -7,7 +7,6 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 
 import com.scratch.ashish.fileserverapp.activities.ListFileActivity;
 
@@ -28,20 +27,21 @@ public class Spalsh extends AppCompatActivity {
 
         /* New Handler to start the Menu-Activity
          * and close this Splash-Screen after some seconds.*/
-        new Handler().postDelayed(new Runnable(){
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 /* Create an Intent that will start the Menu-Activity. */
-                if(isOnline(context)){
-                    Intent mainIntent = new Intent(Spalsh.this,ListFileActivity.class);
-                    Spalsh.this.startActivity(mainIntent);
-                    Spalsh.this.finish();
-                } else {
-                    Toast.makeText(getApplicationContext(), "COnnect to net bitch..!!", Toast.LENGTH_SHORT).show();
-                }
+                Intent mainIntent = new Intent(Spalsh.this, ListFileActivity.class);
+                Spalsh.this.startActivity(mainIntent);
+                Spalsh.this.finish();
             }
+
         }, SPLASH_DISPLAY_LENGTH);
+
     }
+
+
+
 
     public boolean isOnline(Context context) {
         boolean isOnline = true;
