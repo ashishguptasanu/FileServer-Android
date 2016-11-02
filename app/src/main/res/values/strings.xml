@@ -8,6 +8,7 @@
     <string name="year_prompt">Select a year</string>
     <string name="subject_prompt">Select a subject</string>
     <string name="branch_prompt">Select a branch</string>
+    <string name="list_activity">Files</string>
 
 
 </resources>
