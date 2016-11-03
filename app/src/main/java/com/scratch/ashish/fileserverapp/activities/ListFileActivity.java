@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,7 +14,9 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.scratch.ashish.fileserverapp.About;
 import com.scratch.ashish.fileserverapp.R;
+import com.scratch.ashish.fileserverapp.Settings;
 import com.scratch.ashish.fileserverapp.models.Branch;
 import com.scratch.ashish.fileserverapp.models.College;
 import com.scratch.ashish.fileserverapp.models.CollegeResponse;
@@ -244,6 +248,33 @@ public class ListFileActivity extends AppCompatActivity implements AdapterView.O
         dataAdapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         subjectSpinner.setAdapter(dataAdapter5);
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_scrolling, menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            Intent intent_setting = new Intent(this, Settings.class);
+            startActivity(intent_setting);
+            return true;
+        }
+        else if(id == R.id.about) {
+            Intent intent_about = new Intent(this, About.class);
+            startActivity(intent_about);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
