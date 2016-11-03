@@ -37,7 +37,7 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_marginLeft="10dp"
-                            android:src="@drawable/ic_school_black_24dp"/>
+                            android:src="@mipmap/college"/>
                         <android.support.v7.widget.AppCompatSpinner
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -77,7 +77,7 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/branch"
+                        android:src="@mipmap/branch"
                         android:layout_marginLeft="10dp"/>
 
                     <android.support.v7.widget.AppCompatSpinner
@@ -116,7 +116,7 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/course"
+                        android:src="@mipmap/course"
                         android:layout_marginLeft="10dp"/>
 
                     <android.support.v7.widget.AppCompatSpinner
@@ -154,7 +154,7 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/year"
+                        android:src="@mipmap/year"
                         android:layout_marginLeft="10dp"/>
 
                     <android.support.v7.widget.AppCompatSpinner
@@ -173,7 +173,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="8dp"
-            android:layout_marginBottom="30dp">
+            android:layout_marginBottom="50dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -193,7 +193,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="10dp"
-                        android:src="@drawable/ic_folder_open_black_24dp"/>
+                        android:src="@mipmap/subject"/>
                     <android.support.v7.widget.AppCompatSpinner
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
