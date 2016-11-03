@@ -9,6 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.scratch.ashish.fileserverapp.About;
 import com.scratch.ashish.fileserverapp.AndroidVersions;
@@ -32,6 +34,7 @@ public class FinalFile extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ArrayList<AndroidVersions> data;
     private DataAdapter adapter;
+    private ProgressBar progressBar;
     public Context context;
 
     @Override
@@ -47,6 +50,7 @@ public class FinalFile extends AppCompatActivity {
     }
     private void initViews() {
         recyclerView = (RecyclerView) findViewById(R.id.final_file);
+        progressBar = (ProgressBar) findViewById(R.id.progressbar);
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -57,7 +61,9 @@ public class FinalFile extends AppCompatActivity {
         //int position = recyclerView.getAdapter().get
         // }
         // });
+        progressBar.setVisibility(View.VISIBLE);
         loadJSON();
+
 
     }
     private void loadJSON(){
@@ -71,7 +77,7 @@ public class FinalFile extends AppCompatActivity {
         call.enqueue(new Callback<JSONResponse>() {
             @Override
             public void onResponse(Call<JSONResponse> call, Response<JSONResponse> response) {
-
+                progressBar.setVisibility(View.GONE);
                 JSONResponse jsonResponse = response.body();
                 data = new ArrayList<>(Arrays.asList(jsonResponse.getAndroid()));
                 adapter = new DataAdapter(data, FinalFile.this);
@@ -90,6 +96,8 @@ public class FinalFile extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_scrolling, menu);
         return true;
     }
+
+
 
 
     @Override

@@ -217,7 +217,7 @@
         android:id="@+id/submit"
         android:textColor="#fff"
         android:layout_gravity="bottom"
-        android:background="@drawable/my_button"
+        android:background="@color/colorPrimary"
         android:text = "Submit"
         android:elevation="0dp"
         android:layout_marginTop="10dp" />
