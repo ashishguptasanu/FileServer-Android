@@ -12,9 +12,7 @@ android {
         versionCode 9
         versionName "2.1.0"
     }
-    android {
-        useLibrary 'org.apache.http.legacy'
-    }
+
     buildTypes {
         release {
             minifyEnabled false

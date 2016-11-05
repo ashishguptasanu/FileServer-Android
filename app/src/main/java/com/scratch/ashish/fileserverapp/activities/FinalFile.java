@@ -44,7 +44,6 @@ public class FinalFile extends AppCompatActivity {
         Bundle bundle =  getIntent().getExtras();
         if ( bundle!= null && bundle.containsKey("subjectid")){
             subjectUrl = bundle.getString("subjectid");
-            System.out.println(subjectUrl);
         }
         initViews();
     }

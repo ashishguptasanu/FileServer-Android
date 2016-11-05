@@ -158,7 +158,6 @@ public class ListFileActivity extends AppCompatActivity implements AdapterView.O
                     Intent intent = new Intent(this, FinalFile.class);
                     intent.putExtra("subjectid", selectedSubjectId);
                     startActivity(intent);
-                    System.out.println(selectedCollege+ selectedBranch + selectedCourse + selectedYear + selectedSubject);
                 }
                 else{
                     Toast.makeText(this, "Select all fields" , Toast.LENGTH_SHORT ).show();
@@ -168,25 +167,7 @@ public class ListFileActivity extends AppCompatActivity implements AdapterView.O
         }
     }
 
-    /*class RetrieveFeedTask extends AsyncTask<Object, Object, List<College>> {
 
-        private Exception exception;
-
-        public List<College> doInBackground(Object... urls) {
-            InputStream source = retrieveStream(url);
-            Gson gson = new Gson();
-            Reader reader = new InputStreamReader(source);
-            CollegeResponse response = gson.fromJson(reader,CollegeResponse.class);
-            List<College> colleges = response.getColleges();
-
-            return colleges;
-        }
-
-        protected void onPostExecute(List<College> feed) {
-            colleges = feed;
-            populateCollegeSpinner ();
-        }
-    }*/
     private void loadJSON(){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://s3.ap-south-1.amazonaws.com")
