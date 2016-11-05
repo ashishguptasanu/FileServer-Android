@@ -2,6 +2,8 @@ package com.scratch.ashish.fileserverapp.activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -25,14 +27,6 @@ import com.scratch.ashish.fileserverapp.models.Subject;
 import com.scratch.ashish.fileserverapp.models.Year;
 import com.scratch.ashish.fileserverapp.models.json;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,31 +36,37 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static com.scratch.ashish.fileserverapp.R.id.college_spinner;
+
 public class ListFileActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
     String url = "https://s3.ap-south-1.amazonaws.com/rufly/new+json";
     Spinner collegeSpinner, branchSpinner, courseSpinner, yearSpinner, subjectSpinner;
-    int selectedCollege, selectedBranch, selectedYear, selectedCourse, selectedSubject;
+    private static int selectedCollege, selectedBranch, selectedYear, selectedCourse, selectedSubject;
     Button btn;
     String selectedSubjectId;
     Context context;
+
 
     List<College> colleges = new ArrayList<>();
     List<Branch> branches = new ArrayList<>();
     List<Year> years = new ArrayList<>();
     List<Course> courses = new ArrayList<>();
     List<Subject> subjects = new ArrayList<>();
-    private ArrayList<CollegeResponse> data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_file);
+        isOnline(context);
         initializeViews();
         loadJSON();
+
+
         //new RetrieveFeedTask().execute(url);
     }
 
+
     private void initializeViews() {
-        collegeSpinner = (Spinner) findViewById(R.id.college_spinner);
+        collegeSpinner = (Spinner) findViewById(college_spinner);
         collegeSpinner.setOnItemSelectedListener(this);
         branchSpinner = (Spinner) findViewById(R.id.branch_spinner);
         branchSpinner.setEnabled(false);
@@ -79,36 +79,13 @@ public class ListFileActivity extends AppCompatActivity implements AdapterView.O
         btn = (Button)findViewById(R.id.submit);
     }
 
-    private InputStream retrieveStream(String url) {
-        DefaultHttpClient client = new DefaultHttpClient();
-        HttpGet getRequest = new HttpGet(url);
-        try {
-            HttpResponse getResponse = client.execute(getRequest);
-            final int statusCode = getResponse.getStatusLine().getStatusCode();
-            if (statusCode != HttpStatus.SC_OK) {
-                Log.w(getClass().getSimpleName(),
-                        "Error " + statusCode + " for URL " + url);
-                return null;
-            }
-            HttpEntity getResponseEntity = getResponse.getEntity();
-            return getResponseEntity.getContent();
 
-        }
-        catch (IOException e) {
-            getRequest.abort();
-            Log.w(getClass().getSimpleName(), "Error for URL " + url, e);
-        }
-
-
-
-        return null;
-    }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
         switch (parent.getId()){
-            case R.id.college_spinner:
+            case college_spinner:
                 selectedCollege = collegeSpinner.getSelectedItemPosition();
                 branchSpinner.setEnabled(true);
                 branchSpinner.setOnItemSelectedListener(this);
@@ -141,6 +118,28 @@ public class ListFileActivity extends AppCompatActivity implements AdapterView.O
                 break;
 
         }
+    }
+    public boolean isOnline(Context context) {
+        boolean isOnline = true;
+        context = this;
+        ConnectivityManager cm =
+                (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        if(activeNetwork != null && (activeNetwork.isConnected()))
+        {
+            isOnline  = true;
+            Toast toast = Toast.makeText(context,"Connected", (int) 0.3);
+            toast.show();
+        }
+        else{
+            Toast toast = Toast.makeText(context,"Connect to internet", (int) 0.3);
+            toast.show();
+        }
+
+
+        return isOnline;
+
     }
 
 

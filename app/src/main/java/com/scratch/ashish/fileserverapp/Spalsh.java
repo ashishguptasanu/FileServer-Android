@@ -43,21 +43,7 @@ public class Spalsh extends AppCompatActivity {
 
 
 
-    public boolean isOnline(Context context) {
-        boolean isOnline = true;
-        ConnectivityManager cm =
-                (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
 
-        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-        if(activeNetwork != null && (activeNetwork.isConnected()))
-        {
-            isOnline  = true;
-        }
-
-
-        return isOnline;
-
-    }
 
 
 }
