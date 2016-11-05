@@ -114,7 +114,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> im
             }
             downloadmanager.enqueue(request);
 
-            Toast toast = Toast.makeText(context,"Your file is now downloading...", (int) 0.3);
+            Toast toast = Toast.makeText(context,"Your file is now downloading", (int) 0.3);
             toast.show();
 
 
