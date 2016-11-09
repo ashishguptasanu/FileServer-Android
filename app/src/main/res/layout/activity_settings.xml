@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.scratch.ashish.fileserverapp.Settings"
+    tools:context="com.scratch.ashish.fileserverapp.activities.Settings"
     android:padding="7dp"
     android:paddingTop="7dp"
     android:paddingBottom="7dp">

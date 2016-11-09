@@ -1,4 +1,4 @@
-package com.scratch.ashish.fileserverapp;
+package com.scratch.ashish.fileserverapp.models;
 
 /**
  * Created by ashish on 23/8/16.

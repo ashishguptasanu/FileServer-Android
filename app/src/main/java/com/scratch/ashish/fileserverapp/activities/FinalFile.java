@@ -12,12 +12,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.scratch.ashish.fileserverapp.About;
-import com.scratch.ashish.fileserverapp.AndroidVersions;
-import com.scratch.ashish.fileserverapp.DataAdapter;
-import com.scratch.ashish.fileserverapp.JSONResponse;
+import com.scratch.ashish.fileserverapp.models.AndroidVersions;
+import com.scratch.ashish.fileserverapp.adapters.DataAdapter;
+import com.scratch.ashish.fileserverapp.models.JSONResponse;
 import com.scratch.ashish.fileserverapp.R;
-import com.scratch.ashish.fileserverapp.Settings;
 import com.scratch.ashish.fileserverapp.models.FileActivity;
 
 import java.util.ArrayList;

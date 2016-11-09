@@ -1,4 +1,4 @@
-package com.scratch.ashish.fileserverapp;
+package com.scratch.ashish.fileserverapp.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+
+import com.scratch.ashish.fileserverapp.R;
 
 public class About extends AppCompatActivity implements View.OnClickListener {
     private ImageButton img, img2;

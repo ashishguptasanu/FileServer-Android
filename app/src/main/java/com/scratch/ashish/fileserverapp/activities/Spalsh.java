@@ -1,4 +1,4 @@
-package com.scratch.ashish.fileserverapp;
+package com.scratch.ashish.fileserverapp.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
-import com.scratch.ashish.fileserverapp.activities.ListFileActivity;
+import com.scratch.ashish.fileserverapp.R;
 
 /**
  * Created by ashish on 19/10/16.

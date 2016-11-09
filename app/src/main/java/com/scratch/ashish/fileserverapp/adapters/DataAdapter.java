@@ -1,4 +1,4 @@
-package com.scratch.ashish.fileserverapp;
+package com.scratch.ashish.fileserverapp.adapters;
 
 import android.app.DownloadManager;
 import android.content.Context;
@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.scratch.ashish.fileserverapp.models.AndroidVersions;
+import com.scratch.ashish.fileserverapp.R;
 
 import java.util.ArrayList;
 

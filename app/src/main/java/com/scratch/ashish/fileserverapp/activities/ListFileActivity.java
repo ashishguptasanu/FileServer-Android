@@ -16,9 +16,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.scratch.ashish.fileserverapp.About;
 import com.scratch.ashish.fileserverapp.R;
-import com.scratch.ashish.fileserverapp.Settings;
 import com.scratch.ashish.fileserverapp.models.Branch;
 import com.scratch.ashish.fileserverapp.models.College;
 import com.scratch.ashish.fileserverapp.models.CollegeResponse;
