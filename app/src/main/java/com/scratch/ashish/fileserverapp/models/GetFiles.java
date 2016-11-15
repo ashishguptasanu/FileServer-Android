@@ -3,7 +3,7 @@ package com.scratch.ashish.fileserverapp.models;
 /**
  * Created by ashish on 23/8/16.
  */
-public class AndroidVersions {
+public class GetFiles {
     public String ver;
     public String name;
     private String api;

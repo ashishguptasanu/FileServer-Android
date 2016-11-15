@@ -38,8 +38,8 @@
             >
         </activity>
         <activity
-            android:name=".activities.ListFileActivity" />
-        <activity android:name=".activities.FinalFile"
+            android:name=".activities.HomeActivity" />
+        <activity android:name=".activities.FileView"
             android:label="@string/list_activity">
         </activity>
     </application>

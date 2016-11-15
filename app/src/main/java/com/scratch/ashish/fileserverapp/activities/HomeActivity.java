@@ -36,13 +36,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import static com.scratch.ashish.fileserverapp.R.id.college_spinner;
 
-public class ListFileActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
+public class HomeActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
     String url = "https://s3.ap-south-1.amazonaws.com/rufly/new+json";
     Spinner collegeSpinner, branchSpinner, courseSpinner, yearSpinner, subjectSpinner;
     private static int selectedCollege, selectedBranch, selectedYear, selectedCourse, selectedSubject;
     Button btn;
     String selectedSubjectId;
     Context context;
+    Bundle newBundle;
 
 
     List<College> colleges = new ArrayList<>();
@@ -60,6 +61,14 @@ public class ListFileActivity extends AppCompatActivity implements AdapterView.O
 
 
         //new RetrieveFeedTask().execute(url);
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        collegeSpinner = (Spinner) findViewById(R.id.college_spinner);
+        outState.putInt("collegeSpinner", collegeSpinner.getSelectedItemPosition());
+        // do this for each or your Spinner
+        // You might consider using Bundle.putStringArray() instead
     }
 
 
@@ -153,7 +162,7 @@ public class ListFileActivity extends AppCompatActivity implements AdapterView.O
         switch (v.getId()){
             case R.id.submit:
                 if(selectedBranch != 0 && selectedSubject !=0 && selectedCollege != 0 && selectedYear != 0 && selectedCourse != 0 ){
-                    Intent intent = new Intent(this, FinalFile.class);
+                    Intent intent = new Intent(this, FileView.class);
                     intent.putExtra("subjectid", selectedSubjectId);
                     startActivity(intent);
                 }

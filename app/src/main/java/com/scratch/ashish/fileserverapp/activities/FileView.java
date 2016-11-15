@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.scratch.ashish.fileserverapp.models.AndroidVersions;
+import com.scratch.ashish.fileserverapp.models.GetFiles;
 import com.scratch.ashish.fileserverapp.adapters.DataAdapter;
 import com.scratch.ashish.fileserverapp.models.JSONResponse;
 import com.scratch.ashish.fileserverapp.R;
@@ -27,10 +27,10 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class FinalFile extends AppCompatActivity {
+public class FileView extends AppCompatActivity {
     String subjectUrl ;
     private RecyclerView recyclerView;
-    private ArrayList<AndroidVersions> data;
+    private ArrayList<GetFiles> data;
     private DataAdapter adapter;
     private ProgressBar progressBar;
     public Context context;
@@ -77,7 +77,7 @@ public class FinalFile extends AppCompatActivity {
                 progressBar.setVisibility(View.GONE);
                 JSONResponse jsonResponse = response.body();
                 data = new ArrayList<>(Arrays.asList(jsonResponse.getAndroid()));
-                adapter = new DataAdapter(data, FinalFile.this);
+                adapter = new DataAdapter(data, FileView.this);
                 recyclerView.setAdapter(adapter);
             }
 

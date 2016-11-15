@@ -31,7 +31,7 @@ public class Spalsh extends AppCompatActivity {
             @Override
             public void run() {
                 /* Create an Intent that will start the Menu-Activity. */
-                Intent mainIntent = new Intent(Spalsh.this, ListFileActivity.class);
+                Intent mainIntent = new Intent(Spalsh.this, HomeActivity.class);
                 Spalsh.this.startActivity(mainIntent);
                 Spalsh.this.finish();
             }

@@ -4,6 +4,7 @@ import android.app.DownloadManager;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Build;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,9 +12,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.scratch.ashish.fileserverapp.models.AndroidVersions;
 import com.scratch.ashish.fileserverapp.R;
+import com.scratch.ashish.fileserverapp.models.GetFiles;
 
+import org.apache.commons.io.FilenameUtils;
+
+import java.io.File;
 import java.util.ArrayList;
 
 import static android.content.Context.DOWNLOAD_SERVICE;
@@ -22,7 +26,7 @@ import static android.content.Context.DOWNLOAD_SERVICE;
  * Created by ashish on 23/8/16.
  */
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> implements View.OnClickListener {
-    private ArrayList<AndroidVersions> android;
+    private ArrayList<GetFiles> android;
     public ArrayList<String> list = new ArrayList<>();
     public  Uri url;
     private Context context;
@@ -30,8 +34,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> im
     private DownloadManager downloadManager = null;
     private long id;
     public Uri uri;
+    String fileName;
 
-    public DataAdapter(ArrayList<AndroidVersions> android, Context context) {
+    public DataAdapter(ArrayList<GetFiles> android, Context context) {
         this.android = android;
         this.context = context;
 
@@ -73,7 +78,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> im
         public TextView tv_name,tv_version;
 
 
-        ArrayList<AndroidVersions> android = new ArrayList<AndroidVersions>();
+        ArrayList<GetFiles> android = new ArrayList<GetFiles>();
 
 
 
@@ -92,40 +97,48 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> im
             //    System.out.println(android.get(i));
             //}
 
-
-
         }
         @Override
 
 
         public void onClick(View view) {
             position = getAdapterPosition();
-            //System.out.println(position);
-            String servicestring = DOWNLOAD_SERVICE;
-            DownloadManager downloadmanager;
-            downloadmanager = (DownloadManager) context.getSystemService(servicestring);
-
-             url = Uri
+            url = Uri
                     .parse(list.get(position));
-            uri = Uri
-                    .parse(list.get(position));
+            fileName = FilenameUtils.getName(url.getPath());
+            File file = new File("/data/user/0/com.android.providers.downloads/cache/" + fileName);
+            if (!file.exists()) {
+                //System.out.println(position);
+                String servicestring = DOWNLOAD_SERVICE;
+                DownloadManager downloadmanager;
+                downloadmanager = (DownloadManager) context.getSystemService(servicestring);
 
-            DownloadManager.Request request = new DownloadManager.Request(uri);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-                request.allowScanningByMediaScanner();
-                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                url = Uri
+                        .parse(list.get(position));
+                uri = Uri
+                        .parse(list.get(position));
+
+                DownloadManager.Request request = new DownloadManager.Request(uri);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+                    request.allowScanningByMediaScanner();
+                    request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                }
+                downloadmanager.enqueue(request);
+
+                Toast toast = Toast.makeText(context, "Your file is now downloading", (int) 0.3);
+                toast.show();
+            } else {
+
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
+                dialogBuilder.setIcon(R.drawable.ic_get_app_black_24dp);
+                dialogBuilder.setTitle("Warning");
+                dialogBuilder.setMessage("File already exist, go to Downloads");
+                AlertDialog dialog = dialogBuilder.create();
+                dialog.show();
             }
-            downloadmanager.enqueue(request);
-
-            Toast toast = Toast.makeText(context,"Your file is now downloading", (int) 0.3);
-            toast.show();
 
 
-
-
-
-
-            }
+        }
 
 
 
