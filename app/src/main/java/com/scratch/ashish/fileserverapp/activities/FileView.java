@@ -1,5 +1,6 @@
 package com.scratch.ashish.fileserverapp.activities;
 
+import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -113,6 +114,10 @@ public class FileView extends AppCompatActivity {
         else if(id == R.id.about) {
             Intent intent_about = new Intent(this, About.class);
             startActivity(intent_about);
+        }
+        else if(id == R.id.action_download){
+            Intent intent_download = new Intent(DownloadManager.ACTION_VIEW_DOWNLOADS);
+            startActivity(intent_download);
         }
         return super.onOptionsItemSelected(item);
     }

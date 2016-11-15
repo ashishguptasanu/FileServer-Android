@@ -13,4 +13,10 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:showAsAction="ifRoom"
+        android:id="@+id/action_download"
+        android:icon="@mipmap/down_arrow"
+        app:showAsAction="always" />
+
 </menu>
