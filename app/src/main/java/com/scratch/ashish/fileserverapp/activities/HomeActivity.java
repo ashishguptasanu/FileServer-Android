@@ -3,6 +3,7 @@ package com.scratch.ashish.fileserverapp.activities;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.scratch.ashish.fileserverapp.R;
 import com.scratch.ashish.fileserverapp.models.Branch;
 import com.scratch.ashish.fileserverapp.models.College;
@@ -44,7 +46,8 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
     Button btn;
     String selectedSubjectId;
     Context context;
-    Bundle newBundle;
+    private static final String TAG = "HomeActivity";
+    SharedPreferences sharedPreferences;
 
 
     List<College> colleges = new ArrayList<>();
@@ -58,19 +61,17 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_list_file);
         isOnline(context);
         initializeViews();
+
         loadJSON();
 
-
         //new RetrieveFeedTask().execute(url);
+        if (getIntent().getExtras() != null) for (String key : getIntent().getExtras().keySet()) {
+            Object value = getIntent().getExtras().get(key);
+            Log.d(TAG, "Key: " + key + " Value: " + value);
+        }
+        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
     }
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        collegeSpinner = (Spinner) findViewById(R.id.college_spinner);
-        outState.putInt("collegeSpinner", collegeSpinner.getSelectedItemPosition());
-        // do this for each or your Spinner
-        // You might consider using Bundle.putStringArray() instead
-    }
+
 
 
     private void initializeViews() {

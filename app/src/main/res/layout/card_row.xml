@@ -21,10 +21,10 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@mipmap/file"
             android:paddingRight="2dp"
             android:layout_marginTop="10dp"
-            android:paddingLeft="2dp"/>
+            android:paddingLeft="2dp"
+            android:id="@+id/imageFileType"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

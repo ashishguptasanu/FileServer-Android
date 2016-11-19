@@ -13,11 +13,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.scratch.ashish.fileserverapp.models.GetFiles;
-import com.scratch.ashish.fileserverapp.adapters.DataAdapter;
-import com.scratch.ashish.fileserverapp.models.JSONResponse;
 import com.scratch.ashish.fileserverapp.R;
+import com.scratch.ashish.fileserverapp.adapters.DataAdapter;
 import com.scratch.ashish.fileserverapp.models.FileActivity;
+import com.scratch.ashish.fileserverapp.models.GetFiles;
+import com.scratch.ashish.fileserverapp.models.JSONResponse;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,7 +44,9 @@ public class FileView extends AppCompatActivity {
         if ( bundle!= null && bundle.containsKey("subjectid")){
             subjectUrl = bundle.getString("subjectid");
         }
+
         initViews();
+        progressBar.setVisibility(View.VISIBLE);
     }
     private void initViews() {
         recyclerView = (RecyclerView) findViewById(R.id.final_file);
@@ -59,7 +61,7 @@ public class FileView extends AppCompatActivity {
         //int position = recyclerView.getAdapter().get
         // }
         // });
-        progressBar.setVisibility(View.VISIBLE);
+
         loadJSON();
 
 
