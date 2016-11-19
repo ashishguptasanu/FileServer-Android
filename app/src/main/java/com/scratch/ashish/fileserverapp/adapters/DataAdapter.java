@@ -159,7 +159,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> im
                 AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
                 dialogBuilder.setIcon(R.drawable.ic_get_app_black_24dp);
                 dialogBuilder.setTitle("Warning");
-                dialogBuilder.setMessage("File already exist, go to Downloads");
+                dialogBuilder.setMessage("File already exist, Go to Downloads");
                 AlertDialog dialog = dialogBuilder.create();
                 dialog.show();
             }

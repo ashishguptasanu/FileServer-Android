@@ -163,6 +163,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.submit:
+                context = getApplicationContext();
                 if(selectedBranch != 0 && selectedSubject !=0 && selectedCollege != 0 && selectedYear != 0 && selectedCourse != 0 ){
                     Intent intent = new Intent(this, FileView.class);
                     intent.putExtra("subjectid", selectedSubjectId);
